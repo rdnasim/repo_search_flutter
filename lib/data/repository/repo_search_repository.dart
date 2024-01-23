@@ -8,9 +8,9 @@ class RepoSearchRepository {
 
   RepoSearchRepository(this.repoSearchDataProvider);
 
-  Future<List<RepoSearchModel>> searchRepositories(String query, int perPage) async {
+  Future<List<RepoSearchModel>> searchRepositories(String query, int perPage, {int page = 1}) async {
     try {
-      final searchResult = await repoSearchDataProvider.searchRepositories(query, perPage);
+      final searchResult = await repoSearchDataProvider.searchRepositories(query, perPage, page: page);
 
       if (searchResult.isEmpty) {
         return [];

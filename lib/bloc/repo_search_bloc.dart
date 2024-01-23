@@ -18,7 +18,7 @@ void _getSearchRepositories(RepoSearchFetched event, Emitter<RepoSearchState> em
   emit(RepoSearchLoading());
 
   try {
-    final repos = await repoSearchRepository.searchRepositories('flutter', 10);
+    final repos = await repoSearchRepository.searchRepositories('flutter', 20, page: 1);
     emit(RepoSearchSuccess(repos));
   }
   catch (e) {

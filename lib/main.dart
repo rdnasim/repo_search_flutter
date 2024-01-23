@@ -5,7 +5,8 @@ import 'package:repo_search/data/data_provider/repo_search_data_provider.dart';
 import 'package:repo_search/data/repository/repo_search_repository.dart';
 import 'package:repo_search/presentation/screens/dashboard_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
